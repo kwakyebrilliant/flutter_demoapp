@@ -74,9 +74,12 @@ class _DashboardPageState extends State<DashboardPage> {
                 style: GoogleFonts.sourceSansPro(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: 40.0,
+                  fontSize: 20.0,
                 ),
               ),
+            ),
+            const SizedBox(
+              height: 40.0,
             ),
           ],
         ),
