@@ -4,14 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ri.dart';
 
-class SearchBar extends StatefulWidget {
-  const SearchBar({super.key});
+class SearchedBar extends StatefulWidget {
+  const SearchedBar({super.key});
 
   @override
-  State<SearchBar> createState() => _SearchBarState();
+  State<SearchedBar> createState() => _SearchedBarState();
 }
 
-class _SearchBarState extends State<SearchBar> {
+class _SearchedBarState extends State<SearchedBar> {
   @override
   Widget build(BuildContext context) {
     return Padding(
