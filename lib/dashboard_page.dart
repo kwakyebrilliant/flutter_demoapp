@@ -162,10 +162,17 @@ class _DashboardPageState extends State<DashboardPage> {
               ),
             ),
             const SizedBox(
-              height: 40.0,
+              height: 4.0,
             ),
             Container(
               height: 8.0,
+              width: 8.0,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(4.0),
+                color: coffee == selectedItem
+                    ? ColorPalette().coffeeSelected
+                    : Colors.transparent,
+              ),
             ),
           ],
         ),
