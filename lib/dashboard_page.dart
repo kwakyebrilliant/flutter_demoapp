@@ -13,6 +13,16 @@ class DashboardPage extends StatefulWidget {
 }
 
 class _DashboardPageState extends State<DashboardPage> {
+  final List<String> coffeeTypes = [
+    'Cappuccino',
+    'Espresso',
+    'Latte',
+    'Flat White'
+  ];
+
+  String selectedItem = 'Cappuccino';
+  int counter = -1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +85,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 style: GoogleFonts.sourceSansPro(
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
-                  fontSize: 20.0,
+                  fontSize: 40.0,
                 ),
               ),
             ),
@@ -83,6 +93,65 @@ class _DashboardPageState extends State<DashboardPage> {
               height: 40.0,
             ),
             const SearchedBar(),
+            const SizedBox(
+              height: 40.0,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.only(left: 15.0, right: 15.0, top: 15.0),
+              child: ShaderMask(
+                shaderCallback: (Rect bounds) {
+                  return const LinearGradient(
+                          begin: Alignment(0.7, -1.0),
+                          end: Alignment(1.0, -1.0),
+                          colors: <Color>[Colors.black, Colors.transparent])
+                      .createShader(bounds);
+                },
+                blendMode: BlendMode.dstATop,
+                child: Container(
+                  color: const Color(0xFF0D0F14),
+                  width: MediaQuery.of(context).size.width - 20.0,
+                  height: 40.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      ...coffeeTypes.map((e) {
+                        counter++;
+                        if (counter <= 3)
+                          return _buildTypes(e, counter);
+                        else {
+                          counter = 0;
+                          return _buildTypes(e, counter);
+                        }
+                      }).toList()
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTypes(coffee, counter) {
+    return Padding(
+      padding: counter != 0
+          ? const EdgeInsets.only(left: 25.0)
+          : const EdgeInsets.only(left: 7.0),
+      child: Container(
+        height: 50.0,
+        color: const Color(0xFF0D0F14),
+        child: Column(
+          children: <Widget>[
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  selectedItem = coffee;
+                });
+              },
+            ),
           ],
         ),
       ),
