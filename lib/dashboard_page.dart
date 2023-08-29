@@ -28,6 +28,10 @@ class _DashboardPageState extends State<DashboardPage> {
                       padding: const EdgeInsets.all(7.0),
                       height: 42.0,
                       width: 42.0,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF1F242C),
+                        borderRadius: BorderRadius.circular(12.0),
+                      ),
                     ),
                   )
                 ],
