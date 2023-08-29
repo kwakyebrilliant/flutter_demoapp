@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/color_palette.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/heroicons_solid.dart';
 
@@ -63,6 +64,18 @@ class _DashboardPageState extends State<DashboardPage> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            Container(
+              padding: const EdgeInsets.only(left: 15.0, top: 15.0),
+              width: (MediaQuery.of(context).size.width / 3) * 2 + 25.0,
+              child: Text(
+                'Find the best coffee for you',
+                style: GoogleFonts.sourceSansPro(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 40.0,
+                ),
               ),
             ),
           ],
