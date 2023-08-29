@@ -135,6 +135,18 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
               ),
             ),
+            Container(
+              height: (MediaQuery.of(context).size.height / 2) - 50.0,
+              width: MediaQuery.of(context).size.width,
+              child: ListView(
+                padding: const EdgeInsets.only(top: 5.0),
+                children: const <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(left: 15, right: 15.0),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
