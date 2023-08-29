@@ -117,9 +117,9 @@ class _DashboardPageState extends State<DashboardPage> {
                     children: <Widget>[
                       ...coffeeTypes.map((e) {
                         counter++;
-                        if (counter <= 3)
+                        if (counter <= 3) {
                           return _buildTypes(e, counter);
-                        else {
+                        } else {
                           counter = 0;
                           return _buildTypes(e, counter);
                         }
@@ -151,6 +151,21 @@ class _DashboardPageState extends State<DashboardPage> {
                   selectedItem = coffee;
                 });
               },
+              child: Text(
+                coffee,
+                style: GoogleFonts.sourceSansPro(
+                    fontWeight: FontWeight.bold,
+                    color: coffee == selectedItem
+                        ? ColorPalette().coffeeSelected
+                        : ColorPalette().coffeeUnselected,
+                    fontSize: 17.0),
+              ),
+            ),
+            const SizedBox(
+              height: 40.0,
+            ),
+            Container(
+              height: 8.0,
             ),
           ],
         ),
