@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/color_palette.dart';
+import 'package:flutter_demoapp/widgets/search_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/heroicons_solid.dart';
@@ -81,6 +82,7 @@ class _DashboardPageState extends State<DashboardPage> {
             const SizedBox(
               height: 40.0,
             ),
+            const SearchedBar(),
           ],
         ),
       ),
