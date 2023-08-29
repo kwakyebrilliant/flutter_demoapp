@@ -18,8 +18,19 @@ class _DashboardPageState extends State<DashboardPage> {
           children: <Widget>[
             Container(
               padding: const EdgeInsets.fromLTRB(15.0, 25.0, 15.0, 5.0),
-              child: const Row(
-                children: <Widget>[],
+              child: Row(
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {
+                      //todo
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(7.0),
+                      height: 42.0,
+                      width: 42.0,
+                    ),
+                  )
+                ],
               ),
             ),
           ],
