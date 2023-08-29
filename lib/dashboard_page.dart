@@ -3,7 +3,10 @@ import 'package:flutter_demoapp/color_palette.dart';
 import 'package:flutter_demoapp/widgets/search_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/fluent_mdl2.dart';
 import 'package:iconify_flutter/icons/heroicons_solid.dart';
+import 'package:iconify_flutter/icons/ph.dart';
+import 'package:iconify_flutter/icons/ri.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -17,7 +20,9 @@ class _DashboardPageState extends State<DashboardPage> {
     'Cappuccino',
     'Espresso',
     'Latte',
-    'Flat White'
+    'Flat White',
+    'Shake',
+    'Starter'
   ];
 
   String selectedItem = 'Cappuccino';
@@ -27,6 +32,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorPalette().scaffoldBg,
+      bottomNavigationBar: _buildBottomBar(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -176,6 +182,55 @@ class _DashboardPageState extends State<DashboardPage> {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildBottomBar() {
+    return Container(
+      padding: const EdgeInsets.only(left: 25.0, right: 25.0),
+      height: 50.0,
+      decoration: const BoxDecoration(
+        color: Color(0xFF1A1819),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            child: const Iconify(
+              FluentMdl2.home_solid,
+              color: Color(0xFFD17742),
+            ),
+          ),
+          const Iconify(
+            Ph.handbag_fill,
+            color: Color(0xFF4E4F53),
+          ),
+          const Iconify(
+            Ri.heart_2_fill,
+            color: Color(0xFF4E4F53),
+          ),
+          Container(
+            child: Stack(
+              children: <Widget>[
+                const Iconify(
+                  HeroiconsSolid.bell,
+                  color: Color(0xFF4E4F53),
+                ),
+                Positioned(
+                    top: 2.0,
+                    left: 15.0,
+                    child: Container(
+                      height: 7.0,
+                      width: 7.0,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(3.5),
+                          color: Colors.red),
+                    ))
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
