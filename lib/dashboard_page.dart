@@ -183,6 +183,28 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 
+  Widget _buildCoffeeItem(CoffeeItem cItem) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+      child: GestureDetector(
+        onTap: () {},
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15.0),
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: <Color>[
+                ColorPalette().gradientTopLeft,
+                Colors.black,
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildTypes(coffee, counter) {
     return Padding(
       padding: counter != 0
