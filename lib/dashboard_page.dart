@@ -166,7 +166,11 @@ class _DashboardPageState extends State<DashboardPage> {
                       height: 225.0,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
-                        children: <Widget>[],
+                        children: <Widget>[
+                          ...coffeeList.map((e) {
+                            return _buildCoffeeItem(e);
+                          }).toList()
+                        ],
                       ),
                     ),
                   ),
