@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/color_palette.dart';
+import 'package:flutter_demoapp/models/coffee_item.dart';
 import 'package:flutter_demoapp/widgets/search_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
@@ -27,6 +28,22 @@ class _DashboardPageState extends State<DashboardPage> {
 
   String selectedItem = 'Cappuccino';
   int counter = -1;
+
+  final List<CoffeeItem> coffeeList = [
+    CoffeeItem(
+        rating: 4.5,
+        itemImg: 'assets/images/coffeemain.jpg',
+        price: 4.2,
+        subtitle: 'With Oat Milk',
+        title: 'Cappuccino'),
+    CoffeeItem(
+      rating: 4.2,
+      itemImg: 'assets/images/secondary.jpg',
+      price: 3.2,
+      subtitle: 'With Chocolate',
+      title: 'Cappuccino',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
