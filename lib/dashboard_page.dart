@@ -200,6 +200,39 @@ class _DashboardPageState extends State<DashboardPage> {
               ],
             ),
           ),
+          height: 200.0,
+          width: 150.0,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                height: 140.0,
+                width: 150.0,
+                child: Stack(
+                  children: <Widget>[
+                    Positioned(
+                      top: 10.0,
+                      left: 10.0,
+                      child: Hero(
+                        tag: cItem.itemImg.toString(),
+                        child: Container(
+                          height: 120.0,
+                          width: 130.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(cItem.itemImg!),
+                              fit: BoxFit.cover,
+                            ),
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
