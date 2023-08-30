@@ -228,6 +228,32 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                       ),
                     ),
+                    Positioned(
+                      right: 10.0,
+                      top: 10.0,
+                      child: Container(
+                        height: 25.0,
+                        width: 50.0,
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF342520).withOpacity(0.7),
+                          borderRadius: const BorderRadius.only(
+                            topRight: Radius.circular(15.0),
+                            bottomLeft: Radius.circular(15.0),
+                          ),
+                        ),
+                        child: Center(
+                          child: Row(
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: ColorPalette().coffeeSelected,
+                                size: 15.0,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
