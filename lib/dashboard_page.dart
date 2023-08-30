@@ -140,9 +140,18 @@ class _DashboardPageState extends State<DashboardPage> {
               width: MediaQuery.of(context).size.width,
               child: ListView(
                 padding: const EdgeInsets.only(top: 5.0),
-                children: const <Widget>[
+                children: <Widget>[
                   Padding(
-                    padding: EdgeInsets.only(left: 15, right: 15.0),
+                    padding: const EdgeInsets.only(left: 15, right: 15.0),
+                    child: Container(
+                      color: const Color(0xFF0D0F14),
+                      width: MediaQuery.of(context).size.width - 10.0,
+                      height: 225.0,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: <Widget>[],
+                      ),
+                    ),
                   ),
                 ],
               ),
