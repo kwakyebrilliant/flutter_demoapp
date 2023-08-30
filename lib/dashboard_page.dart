@@ -248,7 +248,14 @@ class _DashboardPageState extends State<DashboardPage> {
                                 Icons.star,
                                 color: ColorPalette().coffeeSelected,
                                 size: 15.0,
-                              )
+                              ),
+                              Text(
+                                cItem.rating.toString(),
+                                style: GoogleFonts.sourceSansPro(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 13.0),
+                              ),
                             ],
                           ),
                         ),
