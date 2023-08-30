@@ -270,7 +270,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 child: Text(
                   cItem.title!.toString(),
                   style: GoogleFonts.sourceSansPro(
-                      color: Colors.white, fontSize: 22.0),
+                      color: Colors.white, fontSize: 17.0),
                 ),
               ),
               Padding(
@@ -280,7 +280,30 @@ class _DashboardPageState extends State<DashboardPage> {
                   style: GoogleFonts.sourceSansPro(
                       fontWeight: FontWeight.w200,
                       color: Colors.white,
-                      fontSize: 15.0),
+                      fontSize: 12.0),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Container(
+                      height: 40.0,
+                      width: 60.0,
+                      child: Row(
+                        children: <Widget>[
+                          Text(
+                            '\$',
+                            style: GoogleFonts.sourceSansPro(
+                                fontWeight: FontWeight.bold,
+                                color: ColorPalette().coffeeSelected,
+                                fontSize: 20.0),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ],
