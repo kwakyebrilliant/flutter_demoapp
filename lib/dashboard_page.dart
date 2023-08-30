@@ -243,6 +243,7 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                         child: Center(
                           child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: <Widget>[
                               Icon(
                                 Icons.star,
@@ -262,6 +263,24 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0),
+                child: Text(
+                  cItem.title!.toString(),
+                  style: GoogleFonts.sourceSansPro(
+                      color: Colors.white, fontSize: 22.0),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 10.0, bottom: 5.0),
+                child: Text(
+                  cItem.subtitle!.toString(),
+                  style: GoogleFonts.sourceSansPro(
+                      fontWeight: FontWeight.w200,
+                      color: Colors.white,
+                      fontSize: 15.0),
                 ),
               ),
             ],
