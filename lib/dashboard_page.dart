@@ -206,7 +206,18 @@ class _DashboardPageState extends State<DashboardPage> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Container(),
+                          Container(
+                            height: 115.0,
+                            width: 125.0,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10.0),
+                              image: DecorationImage(
+                                image:
+                                    AssetImage('assets/images/beansbottom.jpg'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
