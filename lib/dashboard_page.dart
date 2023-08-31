@@ -220,6 +220,15 @@ class _DashboardPageState extends State<DashboardPage> {
                           ),
                           Container(
                             height: 115.0,
+                            child: Column(
+                              children: <Widget>[
+                                Container(
+                                  height: 100.0,
+                                  width:
+                                      MediaQuery.of(context).size.width - 185.0,
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
