@@ -319,8 +319,10 @@ class _DashboardPageState extends State<DashboardPage> {
       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
       child: GestureDetector(
         onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => ItemDetails()));
+          Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => ItemDetails(
+                    cItem: cItem,
+                  )));
         },
         child: Container(
           decoration: BoxDecoration(
