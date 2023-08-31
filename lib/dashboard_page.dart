@@ -211,13 +211,14 @@ class _DashboardPageState extends State<DashboardPage> {
                             width: 125.0,
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10.0),
-                              image: DecorationImage(
+                              image: const DecorationImage(
                                 image:
                                     AssetImage('assets/images/beansbottom.jpg'),
                                 fit: BoxFit.cover,
                               ),
                             ),
                           ),
+                          Container(),
                         ],
                       ),
                     ),
