@@ -218,7 +218,9 @@ class _DashboardPageState extends State<DashboardPage> {
                               ),
                             ),
                           ),
-                          Container(),
+                          Container(
+                            height: 115.0,
+                          ),
                         ],
                       ),
                     ),
