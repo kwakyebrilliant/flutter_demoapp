@@ -185,6 +185,18 @@ class _DashboardPageState extends State<DashboardPage> {
                           fontSize: 18.0),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 15.0, right: 15.0, top: 10.0),
+                    child: Container(
+                      padding: const EdgeInsets.all(10.0),
+                      height: 125,
+                      width: MediaQuery.of(context).size.width - 20.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
