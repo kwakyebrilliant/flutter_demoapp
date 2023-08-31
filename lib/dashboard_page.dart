@@ -174,6 +174,11 @@ class _DashboardPageState extends State<DashboardPage> {
                       ),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(
+                        left: 15.0, right: 15.0, top: 10.0),
+                    child: Container(),
+                  ),
                 ],
               ),
             ),
