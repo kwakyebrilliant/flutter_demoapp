@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/color_palette.dart';
 import 'package:flutter_demoapp/models/coffee_item.dart';
+import 'package:flutter_demoapp/screens/item_details.dart';
 import 'package:flutter_demoapp/widgets/search_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
@@ -317,7 +318,10 @@ class _DashboardPageState extends State<DashboardPage> {
     return Padding(
       padding: const EdgeInsets.only(left: 10.0, right: 10.0),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => ItemDetails()));
+        },
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15.0),
