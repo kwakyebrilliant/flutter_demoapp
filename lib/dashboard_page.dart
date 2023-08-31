@@ -310,6 +310,16 @@ class _DashboardPageState extends State<DashboardPage> {
                         ],
                       ),
                     ),
+                    GestureDetector(
+                      onTap: () {
+                        //To do
+                      },
+                      child: Container(
+                        height: 30.0,
+                        width: 30.0,
+                        decoration: BoxDecoration(),
+                      ),
+                    ),
                   ],
                 ),
               ),
