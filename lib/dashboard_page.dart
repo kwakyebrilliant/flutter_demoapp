@@ -223,7 +223,6 @@ class _DashboardPageState extends State<DashboardPage> {
                             child: Column(
                               children: <Widget>[
                                 Container(
-                                  height: 100.0,
                                   width:
                                       MediaQuery.of(context).size.width - 185.0,
                                   child: Text(
@@ -232,6 +231,70 @@ class _DashboardPageState extends State<DashboardPage> {
                                         fontWeight: FontWeight.bold,
                                         color: Colors.white,
                                         fontSize: 17.0),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 30.0,
+                                ),
+                                Container(
+                                  width:
+                                      MediaQuery.of(context).size.width - 185.0,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(
+                                        right: 10.0, left: 10.0),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Container(
+                                          child: Row(
+                                            children: <Widget>[
+                                              Text(
+                                                '\$',
+                                                style:
+                                                    GoogleFonts.sourceSansPro(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: ColorPalette()
+                                                            .coffeeSelected,
+                                                        fontSize: 20.0),
+                                              ),
+                                              Text(
+                                                '4.21',
+                                                style:
+                                                    GoogleFonts.sourceSansPro(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        color: Colors.white,
+                                                        fontSize: 20.0),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        GestureDetector(
+                                          onTap: () {
+                                            //To do
+                                          },
+                                          child: Container(
+                                            height: 30.0,
+                                            width: 30.0,
+                                            decoration: BoxDecoration(
+                                              color:
+                                                  ColorPalette().coffeeSelected,
+                                              borderRadius:
+                                                  BorderRadius.circular(10.0),
+                                            ),
+                                            child: const Center(
+                                              child: Icon(
+                                                Icons.add,
+                                                size: 15.0,
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
