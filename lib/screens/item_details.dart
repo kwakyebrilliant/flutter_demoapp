@@ -17,7 +17,20 @@ class _ItemDetailsState extends State<ItemDetails> {
 
     return Scaffold(
       body: Stack(
-        children: <Widget>[],
+        children: <Widget>[
+          Container(
+            height: screenHeight,
+            width: screenWidth,
+            color: Colors.black,
+          ),
+          Hero(
+            tag: widget.cItem.itemImg.toString(),
+            child: Container(
+              height: (screenHeight / 2) + 70.0,
+              width: screenWidth,
+            ),
+          ),
+        ],
       ),
     );
   }
