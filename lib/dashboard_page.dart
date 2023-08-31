@@ -194,6 +194,20 @@ class _DashboardPageState extends State<DashboardPage> {
                       width: MediaQuery.of(context).size.width - 20.0,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15.0),
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: <Color>[
+                            ColorPalette().gradientTopLeft,
+                            Colors.black
+                          ],
+                        ),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Container(),
+                        ],
                       ),
                     ),
                   ),
