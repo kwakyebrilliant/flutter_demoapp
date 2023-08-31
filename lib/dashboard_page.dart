@@ -33,13 +33,13 @@ class _DashboardPageState extends State<DashboardPage> {
     CoffeeItem(
         rating: 4.5,
         itemImg: 'assets/images/coffeemain.jpg',
-        price: 4.2,
+        price: 4.21,
         subtitle: 'With Oat Milk',
         title: 'Cappuccino'),
     CoffeeItem(
       rating: 4.2,
       itemImg: 'assets/images/secondary.jpg',
-      price: 3.2,
+      price: 3.24,
       subtitle: 'With Chocolate',
       title: 'Cappuccino',
     ),
@@ -298,6 +298,13 @@ class _DashboardPageState extends State<DashboardPage> {
                             style: GoogleFonts.sourceSansPro(
                                 fontWeight: FontWeight.bold,
                                 color: ColorPalette().coffeeSelected,
+                                fontSize: 20.0),
+                          ),
+                          Text(
+                            cItem.price.toString(),
+                            style: GoogleFonts.sourceSansPro(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                                 fontSize: 20.0),
                           ),
                         ],
