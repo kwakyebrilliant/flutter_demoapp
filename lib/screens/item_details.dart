@@ -41,7 +41,35 @@ class _ItemDetailsState extends State<ItemDetails> {
           Positioned(
             top: 35.0,
             left: 20.0,
-            child: Container(),
+            child: Container(
+              color: Colors.transparent,
+              height: 50.0,
+              width: screenWidth - 20.0,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop();
+                    },
+                    child: Container(
+                      height: 45.0,
+                      width: 45.0,
+                      decoration: BoxDecoration(
+                          color: const Color(0xFF14181D),
+                          border: Border.all(
+                              color: const Color(0xFF322B2E), width: 1.0),
+                          borderRadius: BorderRadius.circular(15.0)),
+                      child: const Icon(
+                        Icons.arrow_back_ios_new_rounded,
+                        color: Color(0xFF525154),
+                        size: 17.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ],
       ),
