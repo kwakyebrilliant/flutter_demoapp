@@ -38,6 +38,11 @@ class _ItemDetailsState extends State<ItemDetails> {
               ),
             ),
           ),
+          Positioned(
+            top: 35.0,
+            left: 20.0,
+            child: Container(),
+          ),
         ],
       ),
     );
