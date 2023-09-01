@@ -28,6 +28,14 @@ class _ItemDetailsState extends State<ItemDetails> {
             child: Container(
               height: (screenHeight / 2) + 70.0,
               width: screenWidth,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    widget.cItem.itemImg.toString(),
+                  ),
+                  fit: BoxFit.cover,
+                ),
+              ),
             ),
           ),
         ],
