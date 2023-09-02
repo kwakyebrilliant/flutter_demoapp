@@ -160,6 +160,23 @@ class _ItemDetailsState extends State<ItemDetails> {
                     ),
                     Container(
                       padding: EdgeInsets.only(left: 25.0),
+                      height: 140.0,
+                      width: (screenWidth - 20.0) / 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              Container(
+                                height: 50.0,
+                                width: 50.0,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
