@@ -255,6 +255,31 @@ class _ItemDetailsState extends State<ItemDetails> {
               ),
             ),
           ),
+          Positioned(
+            top: screenHeight / 2 + 140.0,
+            child: Container(
+              height: screenHeight / 2 - 140.0,
+              width: screenWidth,
+              child: ListView(
+                padding: const EdgeInsets.only(left: 15.0),
+                children: <Widget>[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Description',
+                        style: GoogleFonts.sourceSansPro(
+                            color: const Color(0xFF999A9B), fontSize: 17.0),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
