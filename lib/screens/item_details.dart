@@ -93,7 +93,10 @@ class _ItemDetailsState extends State<ItemDetails> {
           ),
           Positioned(
             top: (screenHeight / 2) - 30.0,
-            child: GlassContainer(),
+            child: GlassContainer(
+              height: 150.0,
+              width: screenWidth,
+            ),
           ),
         ],
       ),
