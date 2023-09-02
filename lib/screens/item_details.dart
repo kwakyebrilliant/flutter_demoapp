@@ -274,6 +274,15 @@ class _ItemDetailsState extends State<ItemDetails> {
                       const SizedBox(
                         height: 10.0,
                       ),
+                      Container(
+                        height: 50.0,
+                        width: screenWidth - 30.0,
+                        child: Text(
+                          'A cappuccino is a coffee-based drink made primarily from espresso and milk',
+                          style: GoogleFonts.sourceSansPro(
+                              color: Colors.white, fontSize: 17.0),
+                        ),
+                      ),
                     ],
                   ),
                 ],
