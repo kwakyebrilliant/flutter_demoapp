@@ -121,6 +121,11 @@ class _ItemDetailsState extends State<ItemDetails> {
                                 fontSize: 25.0,
                                 fontWeight: FontWeight.bold),
                           ),
+                          Text(
+                            widget.cItem.subtitle!,
+                            style: GoogleFonts.sourceSansPro(
+                                color: const Color(0xFFADADAD), fontSize: 17.0),
+                          ),
                         ],
                       ),
                     ),
