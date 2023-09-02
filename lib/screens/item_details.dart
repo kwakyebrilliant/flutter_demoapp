@@ -329,7 +329,7 @@ class _ItemDetailsState extends State<ItemDetails> {
         },
         child: Container(
           height: 40.0,
-          width: 100.0,
+          width: 80.0,
           decoration: BoxDecoration(
             color:
                 index == selectedIndex ? Colors.black : const Color(0xFF0D0F14),
