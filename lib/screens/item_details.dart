@@ -158,6 +158,9 @@ class _ItemDetailsState extends State<ItemDetails> {
                         ],
                       ),
                     ),
+                    Container(
+                      padding: EdgeInsets.only(left: 25.0),
+                    ),
                   ],
                 ),
               ),
