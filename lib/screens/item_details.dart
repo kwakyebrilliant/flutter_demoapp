@@ -227,6 +227,26 @@ class _ItemDetailsState extends State<ItemDetails> {
                               )
                             ],
                           ),
+                          const SizedBox(height: 10.0),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                height: 35.0,
+                                width: 120.0,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    color: const Color(0xFF0F1419)),
+                                child: Center(
+                                  child: Text('Medium Roasted',
+                                      style: GoogleFonts.sourceSansPro(
+                                        color: const Color(0xFF909193),
+                                        fontSize: 12.0,
+                                      )),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ),
