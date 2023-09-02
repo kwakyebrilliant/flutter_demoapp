@@ -16,6 +16,7 @@ class ItemDetails extends StatefulWidget {
 }
 
 class _ItemDetailsState extends State<ItemDetails> {
+  int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
@@ -286,6 +287,25 @@ class _ItemDetailsState extends State<ItemDetails> {
                       const SizedBox(
                         height: 10.0,
                       ),
+                      Text(
+                        'Size',
+                        style: GoogleFonts.sourceSansPro(
+                            color: Color(0xFF999A9B), fontSize: 17.0),
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      Container(
+                        width: screenWidth - 130.0,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            _buildSizeButton('S', 0),
+                            _buildSizeButton('M', 1),
+                            _buildSizeButton('L', 2)
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -293,6 +313,49 @@ class _ItemDetailsState extends State<ItemDetails> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildSizeButton(String title, int index) {
+    return AnimatedContainer(
+      duration: const Duration(seconds: 4),
+      curve: Curves.easeIn,
+      child: GestureDetector(
+        onTap: () {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
+        child: Container(
+          height: 40.0,
+          width: 100.0,
+          decoration: BoxDecoration(
+            color:
+                index == selectedIndex ? Colors.black : const Color(0xFF0D0F14),
+            borderRadius: BorderRadius.circular(10.0),
+            border: index == selectedIndex
+                ? Border.all(
+                    color: ColorPalette().coffeeSelected,
+                    style: BorderStyle.solid,
+                    width: 1.0)
+                : Border.all(
+                    color: Colors.black,
+                    style: BorderStyle.solid,
+                    width: 0.2,
+                  ),
+          ),
+          child: Center(
+            child: Text(
+              title,
+              style: GoogleFonts.sourceSansPro(
+                  color: index == selectedIndex
+                      ? ColorPalette().coffeeSelected
+                      : const Color(0xFFADADAD),
+                  fontSize: 15.0),
+            ),
+          ),
+        ),
       ),
     );
   }
