@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/models/coffee_item.dart';
+import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 
 class ItemDetails extends StatefulWidget {
   final CoffeeItem cItem;
@@ -89,6 +90,10 @@ class _ItemDetailsState extends State<ItemDetails> {
                 ],
               ),
             ),
+          ),
+          Positioned(
+            top: (screenHeight / 2) - 30.0,
+            child: GlassContainer(),
           ),
         ],
       ),
