@@ -296,7 +296,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                         height: 10.0,
                       ),
                       Container(
-                        width: screenWidth - 130.0,
+                        width: screenWidth - 30.0,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -329,7 +329,7 @@ class _ItemDetailsState extends State<ItemDetails> {
         },
         child: Container(
           height: 40.0,
-          width: 80.0,
+          width: 100.0,
           decoration: BoxDecoration(
             color:
                 index == selectedIndex ? Colors.black : const Color(0xFF0D0F14),
