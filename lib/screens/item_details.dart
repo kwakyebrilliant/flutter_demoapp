@@ -126,6 +126,9 @@ class _ItemDetailsState extends State<ItemDetails> {
                             style: GoogleFonts.sourceSansPro(
                                 color: const Color(0xFFADADAD), fontSize: 17.0),
                           ),
+                          const SizedBox(
+                            height: 10.0,
+                          ),
                         ],
                       ),
                     ),
