@@ -5,6 +5,7 @@ import 'package:flutter_demoapp/models/coffee_item.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 import 'package:iconify_flutter/iconify_flutter.dart';
+import 'package:iconify_flutter/icons/ic.dart';
 
 class ItemDetails extends StatefulWidget {
   final CoffeeItem cItem;
@@ -187,18 +188,43 @@ class _ItemDetailsState extends State<ItemDetails> {
                                       size: 21.0,
                                     ),
                                     const SizedBox(
-                                      width: 2.0,
+                                      height: 2.0,
                                     ),
                                     Text(
                                       'Coffee',
                                       style: GoogleFonts.sourceSansPro(
-                                        color: Color(0xFF909193),
+                                        color: const Color(0xFF909193),
                                         fontSize: 12.0,
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
+                              Container(
+                                height: 50.0,
+                                width: 50.0,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    color: const Color(0xFF0F1419)),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Iconify(
+                                      Ic.round_water_drop,
+                                      color: ColorPalette().coffeeSelected,
+                                      size: 21.0,
+                                    ),
+                                    const SizedBox(height: 2.0),
+                                    Text(
+                                      'Milk',
+                                      style: GoogleFonts.sourceSansPro(
+                                        color: const Color(0xFF909193),
+                                        fontSize: 12.0,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
                             ],
                           ),
                         ],
