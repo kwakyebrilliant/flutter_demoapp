@@ -283,6 +283,9 @@ class _ItemDetailsState extends State<ItemDetails> {
                               color: Colors.white, fontSize: 17.0),
                         ),
                       ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
                     ],
                   ),
                 ],
