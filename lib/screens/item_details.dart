@@ -96,6 +96,10 @@ class _ItemDetailsState extends State<ItemDetails> {
             child: GlassContainer(
               height: 150.0,
               width: screenWidth,
+              blur: 4,
+              border: Border.fromBorderSide(BorderSide.none),
+              borderRadius: BorderRadius.circular(30.0),
+              color: Colors.black.withOpacity(0.6),
             ),
           ),
         ],
