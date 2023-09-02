@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_demoapp/color_palette.dart';
 import 'package:flutter_demoapp/models/coffee_item.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
@@ -128,6 +129,31 @@ class _ItemDetailsState extends State<ItemDetails> {
                           ),
                           const SizedBox(
                             height: 10.0,
+                          ),
+                          Row(
+                            children: <Widget>[
+                              Icon(
+                                Icons.star,
+                                color: ColorPalette().coffeeSelected,
+                                size: 22.0,
+                              ),
+                              const SizedBox(width: 10.0),
+                              Text(
+                                widget.cItem.rating.toString(),
+                                style: GoogleFonts.sourceSansPro(
+                                    color: Colors.white,
+                                    fontSize: 17.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              const SizedBox(width: 10.0),
+                              Text(
+                                '(6,986)',
+                                style: GoogleFonts.sourceSansPro(
+                                  color: const Color(0xFFADADAD),
+                                  fontSize: 15.0,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
