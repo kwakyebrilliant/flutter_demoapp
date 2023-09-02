@@ -1,8 +1,10 @@
+import 'package:colorful_iconify_flutter/icons/vscode_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/color_palette.dart';
 import 'package:flutter_demoapp/models/coffee_item.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
+import 'package:iconify_flutter/iconify_flutter.dart';
 
 class ItemDetails extends StatefulWidget {
   final CoffeeItem cItem;
@@ -172,6 +174,30 @@ class _ItemDetailsState extends State<ItemDetails> {
                               Container(
                                 height: 50.0,
                                 width: 50.0,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  color: const Color(0xFF0F1419),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    Iconify(
+                                      VscodeIcons.file_type_coffeescript,
+                                      color: ColorPalette().coffeeSelected,
+                                      size: 21.0,
+                                    ),
+                                    const SizedBox(
+                                      width: 2.0,
+                                    ),
+                                    Text(
+                                      'Coffee',
+                                      style: GoogleFonts.sourceSansPro(
+                                        color: Color(0xFF909193),
+                                        fontSize: 12.0,
+                                      ),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ],
                           ),
