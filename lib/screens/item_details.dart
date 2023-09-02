@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_demoapp/models/coffee_item.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:glassmorphism_ui/glassmorphism_ui.dart';
 
 class ItemDetails extends StatefulWidget {
@@ -97,9 +98,35 @@ class _ItemDetailsState extends State<ItemDetails> {
               height: 150.0,
               width: screenWidth,
               blur: 4,
-              border: Border.fromBorderSide(BorderSide.none),
+              border: const Border.fromBorderSide(BorderSide.none),
               borderRadius: BorderRadius.circular(30.0),
               color: Colors.black.withOpacity(0.6),
+              child: Container(
+                height: 140,
+                width: screenWidth - 20.0,
+                child: Row(
+                  children: <Widget>[
+                    Container(
+                      padding: EdgeInsets.only(left: 25.0),
+                      height: 140.0,
+                      width: (screenWidth - 20.0) / 2,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: <Widget>[
+                          Text(
+                            widget.cItem.title!,
+                            style: GoogleFonts.sourceSansPro(
+                                color: Colors.white,
+                                fontSize: 25.0,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ),
         ],
